@@ -2,15 +2,11 @@
 
 一款Flutter版新闻App
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![](https://img-blog.csdnimg.cn/b65d555d0d714d258194b32f4456574e.png)
 
-A few resources to get you started if this is your first Flutter project:
+![](https://img-blog.csdnimg.cn/7feb8aa83b9f4e9fa0679d49fc2cc6cf.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![](https://img-blog.csdnimg.cn/a58b0798402c4c6faf2b81fc2d0ae3ac.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
