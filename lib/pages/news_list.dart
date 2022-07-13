@@ -58,6 +58,7 @@ class _NewsListState extends State<NewsList> {
       if (response.statusCode == 200) {
         String result = response.toString();
         if (result.isNotEmpty) {
+          // var newsModel = NewsModel.fromJson(response.data);
           NewsModel newsModel = newsModelFromJson(response.toString());
           _newsList.clear();
           _newsList.addAll(newsModel.data?.datas ?? []);
@@ -116,19 +117,23 @@ class _NewsListState extends State<NewsList> {
   }
 
   String computeTime(String time) {
-    var datetime = DateTime.parse(time);
-    var now = DateTime.now();
-    var difference = now.difference(datetime);
-    if (difference.inDays > 0) {
-      return "${difference.inDays}天前";
+    try {
+      var datetime = DateTime.parse(time);
+      var now = DateTime.now();
+      var difference = now.difference(datetime);
+      if (difference.inDays > 0) {
+        return "${difference.inDays}天前";
+      }
+      if (difference.inHours > 0) {
+        return "${difference.inHours}时前";
+      }
+      if (difference.inMinutes > 0) {
+        return "${difference.inMinutes}分前";
+      }
+      return "1分钟前";
+    } on Exception catch (e) {
+      return time;
     }
-    if (difference.inHours > 0) {
-      return "${difference.inHours}时前";
-    }
-    if (difference.inMinutes > 0) {
-      return "${difference.inMinutes}分前";
-    }
-    return "1分钟前";
   }
 
   toDetail(String? url) {

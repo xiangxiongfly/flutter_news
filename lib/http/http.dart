@@ -20,6 +20,7 @@ class Http {
       // connectTimeout: 5000,
       // receiveTimeout: 3000,
     );
-    dio = Dio(options);
+    dio = Dio(options)
+    ..interceptors.add(LogInterceptor());
   }
 }
